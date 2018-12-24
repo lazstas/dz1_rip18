@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load bootstrap %}
+
+{% block title %}
+    Добавление компьютера
+{% endblock %}
+
+
+{% block content %}
+    <div class="container my-3">
+        <form method="post" action="." enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form|bootstrap }}
+            <p class="text-center"><button class="btn btn-info" type="submit">Добавить</button></p>
+        </form>
+    </div>
+{% endblock %}
